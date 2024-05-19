@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circulo</title>
+    <link rel="stylesheet" href="../style/styleCirculo.css">
+
+
+</head>
+
+<body class="bodyCirc">
+
+
+    <nav>
+        <a href="../index.html" target="_parent"> Início</a>
+    </nav>
+
+    <main>
+
+
+        <h1>Bem vindo ao mundo do Círculo</h1>
+
+        <div class="caixaPrincipal">
+            <img src="../img/blue-Circle.png" alt="Círculo de cor azul">
+
+            <div class="infForma">
+                <p>O círculo é uma forma geométrica bidimensional plana, formada por todos os pontos em um plano que
+                    estão à
+                    mesma distância de um ponto central chamado centro. Essa distância constante entre o centro e
+                    qualquer
+                    ponto na curva do círculo é chamada de raio.</p>
+            </div>
+
+            <div class="elementos">
+                <ul>
+                    <li>Todos os raios do círculo têm o mesmo tamanho.</li>
+                    <li>O diâmetro é a maior corda possível dentro do círculo</li>
+                    <li>Uma corda e seu raio tangente formam um ângulo reto no ponto de tangência.</li>
+                    <li>Ângulos inscritos em um mesmo arco são congruentes.</li>
+                    <li>O ângulo central que mede a metade de um arco circular é igual à medida do ângulo inscrito que
+                        intercepta esse arco.</li>
+                    <li>A área do círculo é dada pela fórmula A = πr², onde π é uma constante aproximadamente igual a
+                        3,14159.</li>
+                    <li>O perímetro do círculo é dado pela fórmula P = 2πr.</li>
+                </ul>
+
+            </div>
+
+            <section class="caixaCalculo">
+
+                <h2>Calcular Área do Cículo</h2>
+                <br>
+                <label for="raioCirc">Digite o raio do cículo:</label>
+                <input type="number" id="raioCirc">
+                <br>
+                <button id="calcularArea">
+                    Calcular
+                </button>
+                <br>
+                <label for="resultCalc">Resultado:</label>
+                <input type="text" id="resultCalc" disabled></input>
+
+
+
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        function calculoAreaCirc() {
+            let raioCirc = document.getElementById('raioCirc').value;
+
+            let areaCirc = raioCirc * raioCirc * 3.14;
+
+            document.getElementById('resultCalc').value = areaCirc.toFixed(0);
+        }
+
+        document.getElementById('calcularArea').addEventListener('click', calculoAreaCirc);
+    </script>
+</body>
+
+
+
+</html>

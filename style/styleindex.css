@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Titan+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url(../img/MundoDasFormasproibidas.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 50px;
+    font-family: "Titan One";
+    color: aliceblue;
+    text-align: center;
+
+
+}
+
+.caixaPrincipal {
+    display: flex;
+    align-self: center;
+    align-items: stretch;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    flex-basis: auto;
+    width: 70vw;
+    background-color: rgba(217, 217, 217, 0.75);
+    border-radius: 10px;
+    margin:50px 80px 30px;
+    padding: 20px;
+}
+
+ul{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content:center;
+}
+
+.caixaCirculo,
+.caixaRetangulo,
+.caixaCubo,
+.caixaRomboedro,
+.caixaTrapezoideIrregular,
+.caixaQuadrado,
+.caixaPoligonoRegular,
+.caixaCuboide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 200px;
+    height: 60px;
+    background-color: rgba(217, 217, 217, 1);
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.caixaCirculo:hover,
+.caixaRetangulo:hover,
+.caixaCubo:hover,
+.caixaRomboedro:hover,
+.caixaTrapezoideIrregular:hover,
+.caixaQuadrado:hover,
+.caixaPoligonoRegular:hover,
+.caixaCuboide:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+   
+    
+}
+
+ul>div>a{
+    text-decoration: none;
+    list-style: none;
+    color: rgba(60, 133, 174, 1);
+    font-family: "Lato", sans-serif;
+
+}

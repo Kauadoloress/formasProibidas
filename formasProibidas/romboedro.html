@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retagulo</title>
+    <link rel="stylesheet" href="../style/styleromboedro.css">
+
+
+</head>
+
+<body class="bodyRomb">
+
+
+    <nav>
+        <a href="../index.html" target="_parent"> Início</a>
+    </nav>
+
+    <main>
+
+
+        <h1>Bem vindo ao mundo do Romboedro</h1>
+
+        <div class="caixaPrincipal">
+            <img src="../img/romboedro.png" alt="romboedro de colorido">
+
+            <div class="infForma">
+                <p>Um romboedro, também conhecido como sólido de Cleóstrato ou hexaedro romboidal, é um poliedro regular
+                    convexo com seis faces romboides congruentes, doze arestas iguais e oito vértices. É um dos 13
+                    sólidos de Arquimedes, ou seja, um poliedro convexo cujas faces são polígonos regulares e cujas
+                    arestas têm o mesmo tamanho.
+                </p>
+            </div>
+
+            <div class="elementos">
+                <ul>
+                    <li>Faces: As seis superfícies planas do romboedro, todas romboides congruentes</li>
+                    <li>Arestas: As doze arestas do romboedro, todas com o mesmo tamanho.</li>
+                    <li>Vértices: Os oito pontos onde as arestas do romboedro se interceptam.</li>
+                    <li>Ângulos diedros: Os ângulos formados por duas faces adjacentes do romboedro.</li>
+                    <li>Ângulos triedros: Os ângulos formados por três faces que se interceptam em um vértice do romboedro.</li>
+                    <li>Diagonais: Os segmentos de reta que unem pontos opostos do romboedro, não se cruzando em nenhum ponto.</li>
+                    <li>Volume (V): A medida do espaço interno do romboedro. O volume do romboedro pode ser calculado por diferentes fórmulas, como V = a³ / (6√2), onde a é a medida da aresta do romboedro.</li>
+                    <li>Área da superfície total (A): A medida da área total de todas as faces do romboedro. A área da superfície total do romboedro pode ser calculada por diferentes fórmulas, como A = 6a², onde a é a medida da aresta do romboedro.</li>
+                </ul>
+
+            </div>
+
+            <section class="caixaCalculo">
+
+                <h2>Calcular Área total e Volume do Romboedro</h2>
+                <br>
+                <label for="areaRomb">Digite a área do romboedro:</label>
+                <input type="number" id="areaRomb">
+                <br>
+                <button id="calcularAreaeVolume">
+                    Calcular
+                </button>
+                <br>
+                <label for="resultCalc">Área total do Retângulo:</label>
+                <input type="text" id="resultCalc" disabled></input>
+                <label for="resultVol">Volume Retângulo:</label>
+                <input type="text" id="resultVol" disabled></input>
+
+
+
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        function calculoAreaVolRomb() {
+            let areaRomb = document.getElementById('areaRomb').value;
+
+            let areaTotalRomb = 6 * (areaRomb * areaRomb);
+
+            let volRomb = areaRomb * areaRomb * areaRomb;
+
+            document.getElementById('resultCalc').value = areaTotalRomb.toFixed(0);
+            document.getElementById('resultVol').value = volRomb.toFixed(0);
+        }
+
+        document.getElementById('calcularAreaeVolume').addEventListener('click', calculoAreaVolRomb);
+    </script>
+</body>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retagulo</title>
+    <link rel="stylesheet" href="../style/styleRetan.css">
+
+
+</head>
+
+<body class="bodyRetan">
+
+
+    <nav>
+        <a href="../index.html" target="_parent"> Início</a>
+    </nav>
+
+    <main>
+
+
+        <h1>Bem vindo ao mundo do Retângulo</h1>
+
+        <div class="caixaPrincipal">
+            <img src="../img/retangulo.png" alt="Retângulo de cor azul">
+
+            <div class="infForma">
+                <p>Um retângulo é um quadrilátero plano com quatro lados retos e quatro ângulos internos iguais a 90
+                    graus. Os lados opostos de um retângulo são congruentes (têm o mesmo tamanho) e os lados adjacentes
+                    não são congruentes (têm tamanhos diferentes).</p>
+            </div>
+
+            <div class="elementos">
+                <ul>
+                    <li>Vértices: Os pontos onde os lados do retângulo se interceptam.</li>
+                    <li>Lados: Os segmentos de reta que formam o contorno do retângulo.</li>
+                    <li>Ângulos: Os ângulos formados pela intersecção dos lados do retângulo.</li>
+                    <li>Altura (h): A distância perpendicular entre a base e o lado oposto do retângulo.</li>
+                    <li>Base (b): O lado horizontal do retângulo.</li>
+                    <li>Área (A): A medida da superfície interna do retângulo. A área do retângulo é calculada pela fórmula A = b × h</li>
+                    <li>Perímetro (P): A medida do contorno do retângulo. O perímetro do retângulo é calculado pela fórmula P = 2(b + h).</li>
+                </ul>
+
+            </div>
+
+            <section class="caixaCalculo">
+
+                <h2>Calcular Área e Perímetro do Retângulo</h2>
+                <br>
+                <label for="alturaRetan">Digite altura do retângulo:</label>
+                <input type="number" id="alturaRetan">
+                <br>
+                <label for="larguraRetan">Digite a lagura do retângulo:</label>
+                <input type="number" id="larguraRetan">
+                <br>
+                <button id="calcularAreaePerimetro">
+                    Calcular
+                </button>
+                <br>
+                <label for="resultCalc">Área Retângulo:</label>
+                <input type="text" id="resultCalc" disabled></input>
+                <label for="resultPerim">Perímetro Retângulo:</label>
+                <input type="text" id="resultPerim" disabled></input>
+
+
+
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        function calculoAreaRetan() {
+            let alturaRetan = document.getElementById('alturaRetan').value;
+            let larguraRetan = document.getElementById('larguraRetan').value;
+
+            let areaRetan = alturaRetan * larguraRetan;
+
+            let perimetroRetan = 2 *(alturaRetan + larguraRetan);
+
+            document.getElementById('resultCalc').value = areaRetan.toFixed(0);
+            document.getElementById('resultPerim').value = perimetroRetan.toFixed(0);
+        }
+
+        document.getElementById('calcularAreaePerimetro').addEventListener('click', calculoAreaRetan);
+    </script>
+</body>
+
+
+
+</html>

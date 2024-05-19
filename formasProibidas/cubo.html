@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retagulo</title>
+    <link rel="stylesheet" href="../style/styleRetan.css">
+
+
+</head>
+
+<body class="bodyRetan">
+
+
+    <nav>
+        <a href="../index.html" target="_parent"> Início</a>
+    </nav>
+
+    <main>
+
+
+        <h1>Bem vindo ao mundo do Cubo</h1>
+
+        <div class="caixaPrincipal">
+            <img src="../img/cubo.png" alt="Cubo de cor azul">
+
+            <div class="infForma">
+                <p>O cubo é um poliedro regular convexo com seis faces quadradas congruentes, doze arestas iguais e oito
+                    vértices. É um dos cinco sólidos platônicos, ou seja, um poliedro regular cujas faces são polígonos
+                    regulares e cujas arestas têm o mesmo tamanho.</p>
+            </div>
+
+            <div class="elementos">
+                <ul>
+                    <li>Faces: As seis superfícies planas do cubo, todas quadradas e congruentes.</li>
+                    <li>Arestas: As doze arestas do cubo, todas com o mesmo tamanho.</li>
+                    <li>Vértices: Os oito pontos onde as arestas do cubo se interceptam.</li>
+                    <li>Diagonais: Os segmentos de reta que unem pontos opostos do cubo, cruzando-se no centro do cubo.</li>
+                    <li>Diagonal espacial: A diagonal principal do cubo, que une dois vértices opostos passando pelo centro do cubo.</li>
+                    <li>Volume (V): A medida do espaço interno do cubo. O volume do cubo é calculado pela fórmula V = a³, onde a é a medida da aresta do cubo.</li>
+                    <li>Área da superfície total (A): A medida da área total de todas as faces do cubo. A área da superfície total do cubo é calculada pela fórmula A = 6a².</li>
+                </ul>
+
+            </div>
+
+            <section class="caixaCalculo">
+
+                <h2>Calcular Área total e Volume do Cubo</h2>
+                <br>
+                <label for="areaCubo">Digite a área do cubo:</label>
+                <input type="number" id="areaCubo">
+                <br>
+                <button id="calcularAreaeVolume">
+                    Calcular
+                </button>
+                <br>
+                <label for="resultCalc">Área total do cubo:</label>
+                <input type="text" id="resultCalc" disabled></input>
+                <label for="resultVol">Volume cubo:</label>
+                <input type="text" id="resultVol" disabled></input>
+
+
+
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        function calculoAreaVolCubo() {
+            let areaCubo = document.getElementById('areaCubo').value;
+
+            let areaTotalCubo = 6 * (areaCubo * areaCubo);
+
+            let volCubo = areaCubo * areaCubo * areaCubo;
+
+            document.getElementById('resultCalc').value = areaTotalCubo.toFixed(0);
+            document.getElementById('resultVol').value = volCubo.toFixed(0);
+        }
+
+        document.getElementById('calcularAreaeVolume').addEventListener('click', calculoAreaVolCubo);
+    </script>
+</body>
+
+
+
+</html>

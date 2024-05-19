@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retagulo</title>
+    <link rel="stylesheet" href="../style/styleromboedro.css">
+
+
+</head>
+
+<body class="bodyRomb">
+
+
+    <nav>
+        <a href="../index.html" target="_parent"> Início</a>
+    </nav>
+
+    <main>
+
+
+        <h1>Bem vindo ao mundo do Trapezoide irregular</h1>
+
+        <div class="caixaPrincipal">
+            <img src="../img/Trapezoid.svg.png" alt="trapezoide só com cotornos pretos">
+
+            <div class="infForma">
+                <p>Um trapezoide irregular é um quadrilátero convexo que possui apenas um par de lados paralelos. Os
+                    outros dois lados, chamados de bases maiores e menores, não são paralelos e podem ter medidas
+                    diferentes. As diagonais do trapezoide irregular também se interceptam em um ponto, mas esse ponto
+                    não necessariamente divide as diagonais em segmentos proporcionais.
+                </p>
+            </div>
+
+            <div class="elementos">
+                <ul>
+                    <li>Bases: Os lados paralelos do trapezoide (maior e menor)</li>
+                    <li>Lados oblíquos: Os lados não paralelos do trapezoide.</li>
+                    <li>Ângulos: Os quatro ângulos internos do trapezoide, que podem ter qualquer medida.</li>
+                    <li>Altura (h): A distância perpendicular entre as bases do trapezoide.</li>
+                    <li>Área (A): A medida da superfície interna do trapezoide. A área do trapezoide irregular pode ser calculada pela fórmula A = (B + b) * h / 2, onde B e b são as medidas das bases e h é a medida da altura.</li>
+
+                </ul>
+
+            </div>
+
+            <section class="caixaCalculo">
+
+                <h2>Calcular Área do Trapezoide Irregular</h2>
+                <br>
+                <label for="baseATrap">Digite a base de baixo do Trapezoide Irregular:</label>
+                <input type="number" id="baseATrap">
+                <br>
+                <label for="baseBTrap">Digite a base de cima do Trapezoide Irregular:</label>
+                <input type="number" id="baseBTrap">
+                <br>
+                <label for="alturaTrap">Digite a altura do Trapezoide Irregular:</label>
+                <input type="number" id="alturaTrap">
+                <br>
+                <button id="calcularArea">
+                    Calcular
+                </button>
+                <br>
+                <label for="resultCalc">Área do Trapezoide Irregular:</label>
+                <input type="text" id="resultCalc" disabled></input>
+
+
+
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+        function calculoArea() {
+            let baseATrap = document.getElementById('baseATrap').value;
+            let baseBTrap = document.getElementById('baseBTrap').value;
+            let alturaTrap = document.getElementById('alturaTrap').value;
+
+
+            let areaTrap = ((baseATrap + baseBTrap) * alturaTrap)/2;
+
+
+            document.getElementById('resultCalc').value = areaTrap.toFixed(0);
+        }
+
+        document.getElementById('calcularArea').addEventListener('click', calculoArea);
+    </script>
+</body>
